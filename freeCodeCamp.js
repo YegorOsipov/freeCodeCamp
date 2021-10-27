@@ -138,7 +138,74 @@ for (let i = 1; i <= 5; i++) {
 var myArray = [];
 
 // Only change code below this line
-for (let i = 0; i < 10; i += 1) {
+for (let i = 1; i < 10; i += 2) {
   myArray.push(i);
 }
 console.log(myArray);
+
+// Iterate Through an Array with a For Loop
+var myArr = [ 2, 3, 4, 5, 6];
+
+// Only change code below this line
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+
+
+// Nesting For Loops
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j]; 
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+
+// Iterate with JavaScript Do...While Loops
+// Setup
+var myArray = [];
+var i = 10;
+
+// Only change code below this line
+while (i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+
+// Replace Loops using Recursion
+// let arr = [1, 2, 3, 4, 5, 6];
+function sum(arr, n) {
+  // Only change code below this line
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += arr[i];
+  }
+  return sum;
+  // Only change code above this line
+}
+
+
+
+let arr = [1, 2, 3, 4, 5, 6];
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0) {
+    return n;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1] ;
+  }
+  // Only change code above this line
+}
+console.log(sum(arr, 3));
+
+
+// Profile Lookup
