@@ -209,3 +209,89 @@ console.log(sum(arr, 3));
 
 
 // Profile Lookup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      return contacts[i][prop] || 'No such property';
+    }
+  }
+  return 'No such contact';
+  // Only change code above this line
+}
+console.log(lookUpProfile("Akira", "wow"));
+
+
+// Generate Random Fractions with JavaScript - генерация случайных дробей с JS
+// Generate Random Whole Numbers with JavaScript - генерация случайных целых чисел
+function randomWholeNum() {
+
+  // Only change code below this line
+
+  return Math.floor(Math.random() * 10);
+}
+console.log(randomWholeNum());
+
+
+// Generate Random Whole Numbers within a Range - генератор случайных чисел в пределах диапозона
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  // Only change code above this line
+}
+
+
+// Use the parseInt Function
+function convertToInteger(str) {
+  return parseInt(str);
+}
+convertToInteger("56");
+
+
+// Use the parseInt Function with a Radix - использование parseInt с системой счисления
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+console.log(convertToInteger("10011"));
+
+
+// Use the Conditional (Ternary) Operator
+function checkEqual(a, b) {
+  return  a == b ? 'Equal' : 'Not Equal';
+}
+console.log(checkEqual(1, 2));
+
+
+
+
+
+
+
+
