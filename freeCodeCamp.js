@@ -1,3 +1,6 @@
+//=============================================== Basic JS ===========================================
+
+
 function checkObj(obj, checkProp) {
   if (obj.hasOwnProperty(checkProp)) {
     return obj[checkProp];
@@ -106,8 +109,15 @@ var recordCollection = {
 };
 
 function updateRecords(records, id, prop, value) {
-  if (prop != 'tracks' && value != '') {
-
+  if (prop !== 'tracks' && value !== '') {
+    records[id][prop] = value;
+  } else if (prop === 'tracks' && !records[id].hasOwnProperty('tracks') && value !== '') {
+    records[id][prop] = [];
+    records[id][prop] = [value];
+  } else if (prop === 'tracks' && value) {
+    records[id][prop].push(value);
+  } else if (!value) {
+    delete records[id][prop];
   }
 }
 
@@ -289,6 +299,42 @@ function checkEqual(a, b) {
 console.log(checkEqual(1, 2));
 
 
+// Use Multiple Conditional (Ternary) Operators
+function checkSign(num) {
+  return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+}
+console.log(checkSign(10));
+
+
+// Use Recursion to Create a Countdown
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    let countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+console.log(countdown(5));
+
+
+// Use Recursion to Create a Range of Numbers - рекурсия для создания диапозоначисел
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    let countArray = rangeOfNumbers(startNum, endNum - 1);
+    countArray.push(endNum);
+    return countArray;
+  }
+}
+console.log(rangeOfNumbers(1, 5));
+
+
+
+
+// ============================================= ES6 ===============================================
 
 
 
