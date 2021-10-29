@@ -457,7 +457,15 @@ let a = 8, b = 6;
 [a, b] = [b, a];
 
 
-
+// Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+  let [a, b, ...arr] = list;
+  // Only change code above this line
+  return arr;
+}
+let arr0 = removeFirstTwo(source);
 
 
 
