@@ -446,11 +446,17 @@ const LOCAL_FORECAST = {
   tomorrow: { low: 68, high: 80 }
 };
 
-// Only change code below this line
-  
+// Only change code below this line 
 const { today: { low: lowToday, high: highTodays}} = LOCAL_FORECAST;
+// Only change code above this line 
 
-// Only change code above this line
+
+// Use Destructuring Assignment to Assign Variables from Arrays
+let a = 8, b = 6;
+// Only change code below this line
+[a, b] = [b, a];
+
+
 
 
 
