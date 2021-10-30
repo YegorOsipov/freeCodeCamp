@@ -468,5 +468,8 @@ function removeFirstTwo(list) {
 let arr0 = removeFirstTwo(source);
 
 
+// Use Destructuring Assignment to Pass an Object as a Function's Parameters
+
+
 
 
